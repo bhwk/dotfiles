@@ -29,6 +29,9 @@ return {
         ruff = {
           mason = false,
         },
+        jdtls = {
+          mason = false,
+        },
       },
     },
   },
