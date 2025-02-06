@@ -18,6 +18,9 @@ return {
             nixos = {
               expr = '(builtins.getFlake("git+file://"+ toString ./.)).nixosConfigurations.${config.networking.hostName}.options',
             },
+            home_manager = {
+              expr = "(import <home-manager/modules> { configuration = ~/nixos-config/home/common/default.nix; pkgs = import <nixpkgs> {}; }).options",
+            },
           },
         },
         pyright = {
