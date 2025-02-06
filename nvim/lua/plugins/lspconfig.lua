@@ -29,6 +29,7 @@ return {
         ruff = {
           mason = false,
         },
+        -- enable java lsp
         jdtls = {
           mason = false,
         },
