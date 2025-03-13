@@ -79,7 +79,7 @@ export default function NiriWindowTitle() {
     }
 
     const focusedWindow = Object.values(windows.get()).find(win => win.is_focused)
-    return focusedWindow ? (focusedWindow.title.length > 40 ? focusedWindow.title.substring(0, 40).concat("...") : focusedWindow.title) : ""
+    return focusedWindow ? (focusedWindow.app_id.length > 40 ? focusedWindow.app_id.substring(0, 40).concat("...") : focusedWindow.app_id) : ""
   });
 
   return (
