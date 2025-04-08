@@ -126,6 +126,7 @@ function Time({ format = "%H:%M - %A %e." }) {
 export default function Bar(monitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
+
   return <window
     className="Bar"
     gdkmonitor={monitor}
@@ -133,12 +134,9 @@ export default function Bar(monitor: Gdk.Monitor) {
     setup={self => App.add_window(self)}
     exclusivity={Astal.Exclusivity.EXCLUSIVE}
     anchor={TOP | LEFT | RIGHT}>
-    <centerbox>
+    <box>
       <box>
         <NiriWindowTitle />
-      </box>
-      <box halign={Gtk.Align.CENTER}>
-        <Media />
       </box>
       <box hexpand halign={Gtk.Align.END} >
         <Wifi />
@@ -147,6 +145,6 @@ export default function Bar(monitor: Gdk.Monitor) {
         <Time />
         <SysTray />
       </box>
-    </centerbox>
+    </box>
   </window>
 }
