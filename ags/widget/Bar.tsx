@@ -110,7 +110,7 @@ function Media() {
 }
 
 
-function Time({ format = "%H:%M - %A %e." }) {
+function Time({ format = "%H:%M - %A %d/%m/%y" }) {
   const time = Variable<string>("").poll(1000, () =>
     GLib.DateTime.new_now_local().format(format)!)
 
