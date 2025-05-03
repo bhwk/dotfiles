@@ -30,8 +30,9 @@ function Wifi() {
   return <box visible={wifi.as(Boolean)}>
     {wifi.as(wifi => wifi && (
       <label
-        visible={bind(wifi, "active_connection").as(Boolean)}
-        label={bind(wifi, "ssid").as(String)}
+        label={
+          bind(wifi, "state").as((value) => value == 100 ? "Connected" : "Disconnected")
+        }
       />
     ))}
     {wifi.as(wifi => wifi && (
