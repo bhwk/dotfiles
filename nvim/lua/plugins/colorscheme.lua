@@ -1,8 +1,8 @@
 return {
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "github_light",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "stylix_generated",
+    },
+  },
 }
