@@ -1,0 +1,1 @@
+/nix/store/hbkmryxajcmaiv64w4bm2jw0197cmncb-home-manager-files/dotfiles/nvim/lua/user/stylix_palette_table.lua
