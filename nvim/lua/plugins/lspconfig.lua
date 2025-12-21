@@ -6,22 +6,25 @@ return {
         lua_ls = {
           mason = false,
         },
-        nixd = {
+        -- nixd = {
+        --   mason = false,
+        --   nixpkgs = {
+        --     expr = "import <nixpkgs> { }",
+        --   },
+        --   formatting = {
+        --     command = { "nixfmt" },
+        --   },
+        --   options = {
+        --     nixos = {
+        --       expr = '(builtins.getFlake("git+file://"+ toString ./.)).nixosConfigurations.${config.networking.hostName}.options',
+        --     },
+        --     home_manager = {
+        --       expr = "(import <home-manager/modules> { configuration = ~/nixos-config/home/common/default.nix; pkgs = import <nixpkgs> {}; }).options",
+        --     },
+        --   },
+        -- },
+        nil_ls = {
           mason = false,
-          nixpkgs = {
-            expr = "import <nixpkgs> { }",
-          },
-          formatting = {
-            command = { "nixfmt" },
-          },
-          options = {
-            nixos = {
-              expr = '(builtins.getFlake("git+file://"+ toString ./.)).nixosConfigurations.${config.networking.hostName}.options',
-            },
-            home_manager = {
-              expr = "(import <home-manager/modules> { configuration = ~/nixos-config/home/common/default.nix; pkgs = import <nixpkgs> {}; }).options",
-            },
-          },
         },
         pyright = {
           mason = false,
