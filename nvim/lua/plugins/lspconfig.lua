@@ -8,19 +8,6 @@ return {
         },
         nixd = {
           mason = false,
-          -- This section disables the completion capability
-          capabilities = {
-            textDocument = {
-              completion = {
-                completionItem = {
-                  snippetSupport = false,
-                },
-              },
-            },
-          },
-          on_init = function(client)
-            client.server_capabilities.completionProvider = false
-          end,
           nixpkgs = {
             expr = "import <nixpkgs> { }",
           },
@@ -35,9 +22,6 @@ return {
               expr = "(import <home-manager/modules> { configuration = ~/nixos-config/home/common/default.nix; pkgs = import <nixpkgs> {}; }).options",
             },
           },
-        },
-        nil_ls = {
-          mason = false,
         },
         pyright = {
           mason = false,
