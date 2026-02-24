@@ -33,6 +33,10 @@ return {
         jdtls = {
           mason = false,
         },
+        -- clangd lsp
+        clangd = {
+          mason = false,
+        },
       },
     },
   },
