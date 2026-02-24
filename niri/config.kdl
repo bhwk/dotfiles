@@ -121,10 +121,27 @@ output "HDMI-A-1" {
   position x=0 y=-1080
 }
 
+// LAYER RULES
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+// Optionally, disable the workspace shadows in the overview.
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+
+    background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 16
 
@@ -282,8 +299,10 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "noctalia-shell"
-// fix
+// uncomment below when not running as systemd service
+// spawn-at-startup "noctalia-shell"
+
+// fix for services that rely on WAYLAND_DISPLAY
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
